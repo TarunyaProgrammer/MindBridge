@@ -1,4 +1,4 @@
-Recommended Project Folder Structure
+Recommended Project Folder Structure <br>
 `mindbridge/
 ├── static/           # CSS, JS, images
 │   ├── css/
