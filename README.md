@@ -83,7 +83,7 @@ We welcome contributions!
 
 ## 👥 Authors
 - **Frontend/UiUX:** [Tarunya Kesharwani](https://github.com/TarunyaProgrammer)  
-- **Frontend:** Yatharth  
+- **Frontend:** [Yatharth Katta](https://github.com/yats0x7)
 - **UI/UX:** [Sneha Bayan](https://github.com/sneha-bayan)  
 - **Backend:** [Sahil Dhillon](https://github.com/sahildhillon247)  
 - **Database:** Navneet  
