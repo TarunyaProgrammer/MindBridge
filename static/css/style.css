@@ -241,6 +241,9 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.nav-logo img {
+  width: 7rem;
+}
 
 .nav-links {
   display: flex;
