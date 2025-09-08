@@ -1,39 +1,71 @@
-# MindBridge
+# 🌈 MindBridge — AI-Powered Mental Wellness Platform
 
-**MindBridge** is an open-source, AI-powered mental health platform designed for students.  
-It provides accessible, stigma-free support through a web app that integrates chatbot assistance, counselling, and analytics for institutions.
+<p align="center">
+  <img src="static/images/logo.png" alt="MindBridge Logo" width="120"/>
+</p>
+
+<p align="center">
+  <em>“Your safe space for mental wellness, AI-powered support, and compassionate resources.”</em>
+</p>
+
+<p align="center">
+  <a href="https://github.com/TarunyaProgrammer/MindBridge/stargazers"><img src="https://img.shields.io/github/stars/TarunyaProgrammer/MindBridge?style=for-the-badge&color=ff69b4"></a>
+  <a href="https://github.com/TarunyaProgrammer/MindBridge/network/members"><img src="https://img.shields.io/github/forks/TarunyaProgrammer/MindBridge?style=for-the-badge&color=blueviolet"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"></a>
+</p>
 
 ---
 
-## 🚀 Features
+## 🚀 About the Project
 
-- 🤖 **AI First-Aid Chatbot** – Get instant coping strategies and guidance.
-- 🗓 **Confidential Booking** – Book appointments with counsellors securely.
-- 🎧 **Resource Hub** – Access videos, guides, and relaxation audio in regional languages.
-- 🤝 **Peer Support Forum** – Moderated space for peer-to-peer support.
-- 📊 **Admin Dashboard** – Anonymous analytics for data-driven interventions.
+**MindBridge** is an open-source, AI-powered **mental health and wellness platform** designed for students and communities.  
+It offers stigma-free access to AI guidance, mental health resources, confidential counselling, and a supportive space for growth.
+
+✨ Whether you need instant coping strategies, curated self-care content, or 24/7 AI support, **MindBridge is here for you.**
 
 ---
 
-## 🛠 Tech Stack
+## 🌟 Key Features
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** ExpressJs
-- **Database:** MongoDB (cloud-hosted with Atlas)
-- **Version Control:** Git & GitHub
+- 🤖 **AI Wellness Guide** – Compassionate chatbot trained in evidence-based mental health support.
+- 📚 **Resource Hub** – Curated blogs, guides, and self-help tools for anxiety, stress, mindfulness, and more.
+- 🛡️ **Safe & Secure** – Conversations are private and judgment-free.
+- 💝 **24/7 Availability** – Access support anytime, anywhere.
+- 📊 **Anonymous Analytics (for institutions)** – Enables data-driven student well-being initiatives.
+- 🤝 **Community Connection** – Share, learn, and support each other.
+
+---
+
+## 🎥 Demo
+
+🔗 **[Live Demo (GitHub Pages)](https://tarunyaprogrammer.github.io/MindBridge/)**
+
+<p align="center">
+  <img src="static/images/demo-screenshot.png" alt="MindBridge Screenshot" width="600"/>
+</p>
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer               | Technology            |
+| ------------------- | --------------------- |
+| **Frontend**        | HTML, CSS, JavaScript |
+| **Backend**         | Express.js (planned)  |
+| **Database**        | MongoDB Atlas         |
+| **Version Control** | Git & GitHub          |
 
 ---
 
 ## 📂 Project Structure
 
-```
+```bash
 mindbridge/
 ├── static/           # CSS, JS, images
 │   ├── css/
 │   ├── js/
 │   └── images/
-├── templates/        # HTML pages
-│   ├── index.html
+├── index.html        # Main entry point
 └── README.md         # Documentation
 ```
 
@@ -41,64 +73,59 @@ mindbridge/
 
 ## ⚡ Getting Started
 
-### 1. Clone the repository
+### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/mindbridge.git
-cd mindbridge
+git clone https://github.com/TarunyaProgrammer/MindBridge.git
+cd MindBridge
 ```
 
-### 2. Create and activate a virtual environment
+### 2️⃣ Run Locally
 
-```bash
-python -m venv venv
-source venv/bin/activate   # For macOS/Linux
-venv\Scripts\activate      # For Windows
-```
+Since GitHub Pages supports only static hosting:
 
-### 3. Install dependencies
+- Open `index.html` in your browser, or
+- Deploy using GitHub Pages (already configured).
 
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the app
-
-```bash
-python app.py
-```
-
-Then open: `http://127.0.0.1:5000`
+> For full-stack (Express + MongoDB) support, run the backend separately.
 
 ---
 
 ## 🌱 Contributing
 
-We welcome contributions!
+We ❤️ contributions!
 
-- Fork the repo
-- Create a feature branch
-- Commit changes and open a pull request
+- Fork this repo
+- Create a new branch (`feature/awesome-feature`)
+- Commit your changes
+- Open a Pull Request 🎉
+
+Read our [Contribution Guide](CONTRIBUTING.md) (coming soon).
 
 ---
 
-## 👥 Authors
+## 👥 Authors & Contributors
 
-- **Frontend/UiUX:** [Tarunya Kesharwani](https://github.com/TarunyaProgrammer)
-- **Frontend:** [Yatharth Katta](https://github.com/yats0x7)
-- **UI/UX:** [Sneha Bayan](https://github.com/sneha-bayan)
-- **Backend:** [Sahil Dhillon](https://github.com/sahildhillon247)
-- **Database:** Navneet
+- 🎨 **Frontend/UI/UX:** [Tarunya Kesharwani](https://github.com/TarunyaProgrammer)
+- 🎨 **Frontend:** [Yatharth Katta](https://github.com/yats0x7)
+- 🎨 **UI/UX:** [Sneha Bayan](https://github.com/sneha-bayan)
+- ⚙️ **Backend:** [Sahil Dhillon](https://github.com/sahildhillon247)
+- 🗄️ **Database:** Navneet
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License**.
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
 
 ---
 
 ## 🙌 Acknowledgements
 
 - Smart India Hackathon Team
-- OpenAI, MongoDB Atlas, and Flask community resources
+- OpenAI, MongoDB Atlas, and Flask/Express communities
+- All contributors 💙
+
+---
+
+✨ _MindBridge is built with love to support mental wellness journeys everywhere._ 🌈
