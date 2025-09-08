@@ -3,16 +3,841 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MindBridge | Mental Wellness for Students</title>
-    <link
-      rel="shortcut icon"
-      href="/MindBridge/static/images/favicon.ico"
-      type="image/x-icon"
+    <title>MindBridge - Mental Wellness Support</title>
+    <meta
+      name="description"
+      content="MindBridge provides AI-powered mental health support, wellness resources, and a safe space for mental wellness guidance."
     />
-    <link rel="stylesheet" href="/MindBridge/static/css/style.css" />
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="MindBridge - Mental Wellness Support" />
+    <meta
+      property="og:description"
+      content="AI-powered mental health support and wellness resources"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <link rel="stylesheet" href="/static/css/style.css" />
   </head>
   <body>
-    <nav></nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <h2 class="nav-logo">🌈 MindBridge</h2>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <a href="#home" class="nav-link" data-page="home">Home</a>
+          <a href="#blog" class="nav-link" data-page="blog">Resources</a>
+          <a href="#chat" class="nav-link" data-page="chat">AI Guide</a>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="nav-actions">
+          <a href="#help" class="btn btn-help" data-page="help">
+            <i data-lucide="phone"></i>
+            Get Help Now
+          </a>
+          <a href="#donate" class="btn btn-donate" data-page="donate">
+            <i data-lucide="heart"></i>
+            Donate
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+          <a href="#home" class="mobile-nav-link" data-page="home">
+            <i data-lucide="home"></i>
+            Home
+          </a>
+          <a href="#blog" class="mobile-nav-link" data-page="blog">
+            <i data-lucide="book-open"></i>
+            Resources
+          </a>
+          <a href="#chat" class="mobile-nav-link" data-page="chat">
+            <i data-lucide="message-circle"></i>
+            AI Guide
+          </a>
+          <a href="#help" class="mobile-nav-link" data-page="help">
+            <i data-lucide="phone"></i>
+            Get Help Now
+          </a>
+          <a href="#donate" class="mobile-nav-link" data-page="donate">
+            <i data-lucide="heart"></i>
+            Donate
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+      <!-- Home Page -->
+      <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-bg">
+            <div class="bg-element bg-element-1"></div>
+            <div class="bg-element bg-element-2"></div>
+            <div class="bg-element bg-element-3"></div>
+          </div>
+          <div class="container">
+            <div class="hero-content">
+              <h1 class="hero-title" data-testid="title-hero">
+                <span class="gradient-text">MindBridge</span>
+              </h1>
+              <p class="hero-subtitle" data-testid="text-hero-subtitle">
+                🌟 Your safe space for mental wellness and AI-powered support 🤗
+              </p>
+              <p class="hero-description" data-testid="text-hero-description">
+                💙 Connect with our compassionate AI guide, explore
+                evidence-based wellness resources, and find the support you
+                deserve in your mental health journey.
+              </p>
+              <div class="hero-actions">
+                <a
+                  href="#chat"
+                  class="btn btn-primary btn-lg"
+                  data-page="chat"
+                  data-testid="button-chat-guide"
+                >
+                  <i data-lucide="message-circle"></i>
+                  Talk to AI Guide
+                </a>
+                <a
+                  href="#blog"
+                  class="btn btn-secondary btn-lg"
+                  data-page="blog"
+                  data-testid="button-explore-blogs"
+                >
+                  <i data-lucide="book-open"></i>
+                  Explore Resources
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+          <div class="features-bg">
+            <div class="bg-gradient"></div>
+          </div>
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title" data-testid="title-features">
+                <span class="gradient-text">🌟 How We Support You</span>
+              </h2>
+              <p
+                class="section-description"
+                data-testid="text-features-description"
+              >
+                💝 Discover the caring ways we're here to support your mental
+                wellness journey
+              </p>
+            </div>
+            <div class="features-grid">
+              <div class="feature-card" data-testid="card-ai-guide">
+                <div class="feature-icon">
+                  <i data-lucide="bot"></i>
+                </div>
+                <h3 class="feature-title">🤖 AI Wellness Guide</h3>
+                <p class="feature-description">
+                  Chat with our compassionate AI trained in mental health
+                  support and evidence-based wellness practices.
+                </p>
+              </div>
+              <div class="feature-card" data-testid="card-resources">
+                <div class="feature-icon">
+                  <i data-lucide="book-open"></i>
+                </div>
+                <h3 class="feature-title">📚 Curated Resources</h3>
+                <p class="feature-description">
+                  Access professionally curated articles, guides, and tools for
+                  anxiety, depression, stress management, and more.
+                </p>
+              </div>
+              <div class="feature-card" data-testid="card-support">
+                <div class="feature-icon">
+                  <i data-lucide="heart"></i>
+                </div>
+                <h3 class="feature-title">💝 24/7 Support</h3>
+                <p class="feature-description">
+                  Find help whenever you need it with our always-available
+                  resources and crisis support connections.
+                </p>
+              </div>
+              <div class="feature-card" data-testid="card-safe-space">
+                <div class="feature-icon">
+                  <i data-lucide="shield"></i>
+                </div>
+                <h3 class="feature-title">🛡️ Safe & Private</h3>
+                <p class="feature-description">
+                  Your conversations and journey are completely private and
+                  secure in our judgment-free environment.
+                </p>
+              </div>
+              <div class="feature-card" data-testid="card-personalized">
+                <div class="feature-icon">
+                  <i data-lucide="sparkles"></i>
+                </div>
+                <h3 class="feature-title">✨ Personalized Care</h3>
+                <p class="feature-description">
+                  Receive tailored recommendations and support based on your
+                  unique needs and wellness goals.
+                </p>
+              </div>
+              <div class="feature-card" data-testid="card-community">
+                <div class="feature-icon">
+                  <i data-lucide="users"></i>
+                </div>
+                <h3 class="feature-title">🤝 Community Connection</h3>
+                <p class="feature-description">
+                  Connect with others on similar journeys through shared
+                  resources and supportive content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Featured Resources Section -->
+        <section class="featured-resources">
+          <div class="featured-bg">
+            <div class="bg-element bg-element-4"></div>
+            <div class="bg-element bg-element-5"></div>
+          </div>
+          <div class="container">
+            <div class="section-header">
+              <h2 class="section-title" data-testid="title-featured-resources">
+                <span class="gradient-text"
+                  >🌟 Featured Wellness Resources</span
+                >
+              </h2>
+              <p
+                class="section-description"
+                data-testid="text-featured-description"
+              >
+                📚 Discover our latest articles and guides to support your
+                mental wellness journey
+              </p>
+            </div>
+            <div class="blog-slider-container">
+              <div class="blog-slider" id="blogSlider">
+                <!-- Blog cards will be populated by JavaScript -->
+              </div>
+              <button
+                class="slider-btn slider-prev"
+                id="sliderPrev"
+                data-testid="button-slider-prev"
+              >
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button
+                class="slider-btn slider-next"
+                id="sliderNext"
+                data-testid="button-slider-next"
+              >
+                <i data-lucide="chevron-right"></i>
+              </button>
+              <div class="slider-indicators" id="sliderIndicators">
+                <!-- Indicators will be populated by JavaScript -->
+              </div>
+            </div>
+            <div class="section-footer">
+              <a
+                href="#blog"
+                class="btn btn-secondary btn-lg"
+                data-page="blog"
+                data-testid="button-view-all-resources"
+              >
+                <i data-lucide="book-open"></i>
+                View All Resources
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+          <div class="cta-bg">
+            <div class="bg-gradient-cta"></div>
+          </div>
+          <div class="container">
+            <div class="cta-content">
+              <h2 class="cta-title" data-testid="title-cta">
+                🌈 Ready to Begin Your Wellness Journey?
+              </h2>
+              <p class="cta-description" data-testid="text-cta-description">
+                💪 Take the first step toward better mental health with our
+                supportive AI guide and comprehensive resources. 🌟
+              </p>
+              <a
+                href="#chat"
+                class="btn btn-primary btn-xl"
+                data-page="chat"
+                data-testid="button-start-chatting"
+              >
+                🌟 Start Your Wellness Journey 🌟
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Blog Page -->
+      <div id="blog" class="page">
+        <section class="page-header">
+          <div class="page-header-bg">
+            <div class="bg-element bg-element-6"></div>
+            <div class="bg-element bg-element-7"></div>
+          </div>
+          <div class="container">
+            <h1 class="page-title" data-testid="title-blog">
+              <span class="gradient-text">🌱 Wellness Resources</span>
+            </h1>
+            <p class="page-description" data-testid="text-blog-description">
+              📖 Discover evidence-based articles, guides, and tools to support
+              your mental wellness journey
+            </p>
+          </div>
+        </section>
+
+        <section class="blog-content">
+          <div class="container">
+            <!-- Search and Filter -->
+            <div class="blog-controls">
+              <div class="search-box">
+                <i data-lucide="search" class="search-icon"></i>
+                <input
+                  type="text"
+                  id="blogSearch"
+                  placeholder="Search wellness resources..."
+                  data-testid="input-blog-search"
+                />
+              </div>
+              <div class="filter-tabs" id="filterTabs">
+                <button
+                  class="filter-tab active"
+                  data-category="all"
+                  data-testid="button-filter-all"
+                >
+                  All Resources
+                </button>
+                <button
+                  class="filter-tab"
+                  data-category="anxiety"
+                  data-testid="button-filter-anxiety"
+                >
+                  Anxiety
+                </button>
+                <button
+                  class="filter-tab"
+                  data-category="depression"
+                  data-testid="button-filter-depression"
+                >
+                  Depression
+                </button>
+                <button
+                  class="filter-tab"
+                  data-category="stress"
+                  data-testid="button-filter-stress"
+                >
+                  Stress
+                </button>
+                <button
+                  class="filter-tab"
+                  data-category="mindfulness"
+                  data-testid="button-filter-mindfulness"
+                >
+                  Mindfulness
+                </button>
+                <button
+                  class="filter-tab"
+                  data-category="self-care"
+                  data-testid="button-filter-self-care"
+                >
+                  Self-Care
+                </button>
+              </div>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid" id="blogGrid">
+              <!-- Blog posts will be populated by JavaScript -->
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Chat Page -->
+      <div id="chat" class="page">
+        <section class="chat-header">
+          <div class="container">
+            <h1 class="page-title" data-testid="title-chat">
+              <span class="gradient-text">🤖 AI Wellness Guide</span>
+            </h1>
+            <p class="page-description" data-testid="text-chat-description">
+              💬 Have a supportive conversation with our AI guide trained in
+              mental wellness and evidence-based practices
+            </p>
+          </div>
+        </section>
+
+        <section class="chat-section">
+          <div class="container">
+            <div class="chat-container">
+              <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                  <div class="message-avatar">
+                    <i data-lucide="bot"></i>
+                  </div>
+                  <div class="message-content">
+                    <p>
+                      Hello! 👋 I'm your AI wellness guide. I'm here to provide
+                      supportive conversation and share evidence-based mental
+                      health resources. How are you feeling today, and how can I
+                      support you?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                  <textarea
+                    id="chatInput"
+                    placeholder="Share what's on your mind..."
+                    rows="1"
+                    data-testid="textarea-chat-input"
+                  ></textarea>
+                  <button
+                    id="sendButton"
+                    class="btn btn-send"
+                    disabled
+                    data-testid="button-send-message"
+                  >
+                    <i data-lucide="send"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Donate/Help Page -->
+      <div id="donate" class="page">
+        <section class="page-header">
+          <div class="page-header-bg">
+            <div class="bg-element bg-element-8"></div>
+            <div class="bg-element bg-element-9"></div>
+          </div>
+          <div class="container">
+            <h1 class="page-title" data-testid="title-donate">
+              <span class="gradient-text">🤝 Support & Connect</span>
+            </h1>
+            <p class="page-description" data-testid="text-donate-description">
+              💝 Help us continue providing mental wellness support or reach out
+              to connect with our team. 🌟
+            </p>
+          </div>
+        </section>
+
+        <section class="donate-content">
+          <div class="container">
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+              <button
+                class="tab-btn active"
+                data-tab="donate"
+                data-testid="button-donate-tab"
+              >
+                <i data-lucide="heart"></i>
+                Donate
+              </button>
+              <button
+                class="tab-btn"
+                data-tab="contact"
+                data-testid="button-contact-tab"
+              >
+                <i data-lucide="mail"></i>
+                Contact Us
+              </button>
+            </div>
+
+            <!-- Donate Tab -->
+            <div id="donate-tab" class="tab-content active">
+              <div class="tab-grid">
+                <!-- Donation Form -->
+                <div class="form-card">
+                  <h3 class="form-title">🎯 Make a Difference Today</h3>
+                  <form id="donateForm">
+                    <div class="form-section">
+                      <label class="form-label">Choose Your Impact Level</label>
+                      <div class="amount-grid">
+                        <button
+                          type="button"
+                          class="amount-btn active"
+                          data-amount="25"
+                          data-testid="button-amount-25"
+                        >
+                          <div class="amount-value">$25</div>
+                          <div class="amount-description">
+                            Funds wellness resources for 5 people
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="amount-btn"
+                          data-amount="50"
+                          data-testid="button-amount-50"
+                        >
+                          <div class="amount-value">$50</div>
+                          <div class="amount-description">
+                            Supports mental health outreach
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="amount-btn"
+                          data-amount="100"
+                          data-testid="button-amount-100"
+                        >
+                          <div class="amount-value">$100</div>
+                          <div class="amount-description">
+                            Sponsors crisis intervention training
+                          </div>
+                        </button>
+                        <button
+                          type="button"
+                          class="amount-btn"
+                          data-amount="10"
+                          data-testid="button-amount-10"
+                        >
+                          <div class="amount-value">$10</div>
+                          <div class="amount-description">
+                            Provides AI support for 1 person
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="form-section">
+                      <label for="customAmount" class="form-label"
+                        >💰 Custom Amount</label
+                      >
+                      <div class="input-wrapper">
+                        <i data-lucide="dollar-sign" class="input-icon"></i>
+                        <input
+                          type="number"
+                          id="customAmount"
+                          placeholder="Enter amount"
+                          data-testid="input-custom-amount"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-section">
+                      <label class="form-label">👤 Donor Information</label>
+                      <div class="form-row">
+                        <input
+                          type="text"
+                          placeholder="First Name"
+                          data-testid="input-first-name"
+                        />
+                        <input
+                          type="text"
+                          placeholder="Last Name"
+                          data-testid="input-last-name"
+                        />
+                      </div>
+                      <input
+                        type="email"
+                        placeholder="Email Address"
+                        data-testid="input-donor-email"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-lg btn-full"
+                      data-testid="button-donate-submit"
+                    >
+                      <i data-lucide="credit-card"></i>
+                      <span id="donateButtonText">Donate $25 Securely</span>
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Impact Information -->
+                <div class="impact-card">
+                  <h3 class="impact-title">🌟 Your Impact</h3>
+                  <div class="impact-stats">
+                    <div class="impact-stat">
+                      <div class="impact-icon">
+                        <i data-lucide="users"></i>
+                      </div>
+                      <div class="impact-info">
+                        <div class="impact-number">
+                          10,000+ People Supported
+                        </div>
+                        <div class="impact-description">
+                          Through our AI wellness platform
+                        </div>
+                      </div>
+                    </div>
+                    <div class="impact-stat">
+                      <div class="impact-icon">
+                        <i data-lucide="phone"></i>
+                      </div>
+                      <div class="impact-info">
+                        <div class="impact-number">24/7 Crisis Support</div>
+                        <div class="impact-description">
+                          Always available when needed
+                        </div>
+                      </div>
+                    </div>
+                    <div class="impact-stat">
+                      <div class="impact-icon">
+                        <i data-lucide="heart"></i>
+                      </div>
+                      <div class="impact-info">
+                        <div class="impact-number">
+                          Evidence-Based Resources
+                        </div>
+                        <div class="impact-description">
+                          Curated wellness content
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Tab -->
+            <div id="contact-tab" class="tab-content">
+              <div class="tab-grid">
+                <!-- Contact Form -->
+                <div class="form-card">
+                  <h3 class="form-title">📧 Get In Touch</h3>
+                  <form id="contactForm">
+                    <div class="form-row">
+                      <div class="form-field">
+                        <label for="contactName" class="form-label"
+                          >👤 Full Name</label
+                        >
+                        <input
+                          type="text"
+                          id="contactName"
+                          placeholder="Your full name"
+                          data-testid="input-contact-name"
+                        />
+                      </div>
+                      <div class="form-field">
+                        <label for="contactEmail" class="form-label"
+                          >📧 Email</label
+                        >
+                        <input
+                          type="email"
+                          id="contactEmail"
+                          placeholder="your.email@example.com"
+                          data-testid="input-contact-email"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-field">
+                      <label for="contactSubject" class="form-label"
+                        >🎯 Subject</label
+                      >
+                      <input
+                        type="text"
+                        id="contactSubject"
+                        placeholder="How can we help you?"
+                        data-testid="input-contact-subject"
+                      />
+                    </div>
+                    <div class="form-field">
+                      <label for="contactMessage" class="form-label"
+                        >💬 Message</label
+                      >
+                      <textarea
+                        id="contactMessage"
+                        rows="6"
+                        placeholder="Tell us more about your inquiry..."
+                        data-testid="textarea-contact-message"
+                      ></textarea>
+                    </div>
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-lg btn-full"
+                      data-testid="button-contact-submit"
+                    >
+                      <i data-lucide="mail"></i>
+                      Send Message
+                    </button>
+                  </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                  <div class="contact-card" data-testid="card-contact-0">
+                    <div class="contact-icon">
+                      <i data-lucide="phone"></i>
+                    </div>
+                    <div class="contact-details">
+                      <h4 class="contact-title">Crisis Support Hotline</h4>
+                      <div class="contact-value">
+                        1-800-MINDBRIDGE (1-800-646-3274)
+                      </div>
+                      <div class="contact-description">
+                        Available 24/7 for immediate support
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact-card" data-testid="card-contact-1">
+                    <div class="contact-icon">
+                      <i data-lucide="mail"></i>
+                    </div>
+                    <div class="contact-details">
+                      <h4 class="contact-title">Email Support</h4>
+                      <div class="contact-value">support@mindbridge.org</div>
+                      <div class="contact-description">
+                        Response within 24 hours
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact-card" data-testid="card-contact-2">
+                    <div class="contact-icon">
+                      <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="contact-details">
+                      <h4 class="contact-title">Office Location</h4>
+                      <div class="contact-value">
+                        123 Wellness Street, Support City, SC 12345
+                      </div>
+                      <div class="contact-description">By appointment only</div>
+                    </div>
+                  </div>
+                  <div class="crisis-card">
+                    <h4 class="crisis-title">🚨 Crisis Support</h4>
+                    <p class="crisis-description">
+                      If you're experiencing a mental health crisis or having
+                      thoughts of suicide, please reach out immediately:
+                    </p>
+                    <ul class="crisis-contacts">
+                      <li>• National Suicide Prevention Lifeline: 988</li>
+                      <li>• Crisis Text Line: Text HOME to 741741</li>
+                      <li>• Emergency Services: 911</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Help Page (same as donate) -->
+      <div id="help" class="page">
+        <!-- Same content as donate page -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bg">
+        <div class="bg-gradient-footer"></div>
+      </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3 class="footer-logo">🌈 MindBridge</h3>
+            <p class="footer-description">
+              💙 Supporting mental wellness through AI-powered guidance and
+              evidence-based resources. Your journey matters, and you're never
+              alone. 🤗
+            </p>
+            <div class="footer-actions">
+              <a
+                href="#help"
+                class="btn btn-help"
+                data-page="help"
+                data-testid="button-footer-help"
+              >
+                <i data-lucide="phone"></i>
+                Get Help Now
+              </a>
+              <a
+                href="#donate"
+                class="btn btn-donate"
+                data-page="donate"
+                data-testid="button-footer-donate"
+              >
+                <i data-lucide="heart"></i>
+                Donate
+              </a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4 class="footer-section-title">🔗 Quick Links</h4>
+              <ul class="footer-nav">
+                <li><a href="#home" data-page="home">Home</a></li>
+                <li><a href="#blog" data-page="blog">Wellness Resources</a></li>
+                <li><a href="#chat" data-page="chat">AI Wellness Guide</a></li>
+                <li>
+                  <a href="#donate" data-page="donate">Support & Contact</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4 class="footer-section-title">🆘 Crisis Resources</h4>
+              <ul class="crisis-links">
+                <li>
+                  National Suicide Prevention Lifeline: <strong>988</strong>
+                </li>
+                <li>Crisis Text Line: <strong>Text HOME to 741741</strong></li>
+                <li>Emergency Services: <strong>911</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-content">
+            <p>&copy; 2024 MindBridge. Committed to mental wellness support.</p>
+            <div class="footer-disclaimer">
+              <p>
+                🔒 <strong>Disclaimer:</strong> MindBridge provides supportive
+                resources and AI guidance but does not replace professional
+                mental health treatment. If you're experiencing a mental health
+                crisis, please contact emergency services or a mental health
+                professional immediately.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
   </body>
-  <script src="/MindBridge/static/js/script.js"></script>
 </html>
