@@ -1,7 +1,7 @@
 # 🌈 MindBridge — AI-Powered Mental Wellness Platform
 
 <p align="center">
-  <img src="static/images/logo_Edited.jpg" alt="MindBridge Logo" width="220"/>
+  <img src="/images/logo_Edited.jpg" alt="MindBridge Logo" width="220"/>
 </p>
 
 <p align="center">
