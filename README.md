@@ -41,7 +41,7 @@ It offers stigma-free access to AI guidance, mental health resources, confidenti
 🔗 **[Live Demo (GitHub Pages)](https://tarunyaprogrammer.github.io/MindBridge/)**
 
 <p align="center">
-  <img src="static/images/demo-screenshot.png" alt="MindBridge Screenshot" width="600"/>
+  <img src="/images/mvp.png" alt="MindBridge Screenshot" width="600"/>
 </p>
 
 ---
