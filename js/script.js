@@ -89,6 +89,7 @@ let currentTab = "donate";
 let filteredPosts = [...blogPosts];
 let searchQuery = "";
 let activeCategory = "all";
+let sliderTotalSlides = 0;
 
 // DOM elements
 let mobileMenuBtn,
@@ -110,6 +111,15 @@ document.addEventListener("DOMContentLoaded", function () {
   mobileMenuBtn = document.getElementById("mobileMenuBtn");
   mobileMenu = document.getElementById("mobileMenu");
   blogSlider = document.getElementById("blogSlider");
+  // Ensure slider track exists inside blogSlider
+  if (blogSlider && !blogSlider.querySelector(".blog-slider-track")) {
+    const track = document.createElement("div");
+    track.className = "blog-slider-track";
+    while (blogSlider.firstChild) {
+      track.appendChild(blogSlider.firstChild);
+    }
+    blogSlider.appendChild(track);
+  }
   sliderIndicators = document.getElementById("sliderIndicators");
   chatMessages = document.getElementById("chatMessages");
   chatInput = document.getElementById("chatInput");
@@ -242,8 +252,11 @@ function setupBlogSlider() {
 function renderSliderContent() {
   const slidesToShow = Math.min(4, blogPosts.length);
   const slides = blogPosts.slice(0, slidesToShow);
+  sliderTotalSlides = slides.length;
+  const track = blogSlider?.querySelector(".blog-slider-track");
+  if (!track) return;
 
-  blogSlider.innerHTML = slides
+  track.innerHTML = slides
     .map(
       (post) => `
         <div class="blog-card" data-testid="slider-card-${post.id}">
@@ -321,15 +334,16 @@ function setupSliderControls() {
 
   if (prevBtn) {
     prevBtn.addEventListener("click", () => {
-      currentSlide =
-        currentSlide > 0 ? currentSlide - 1 : Math.min(3, blogPosts.length - 1);
+      const lastIndex = Math.max(0, sliderTotalSlides - 1);
+      currentSlide = currentSlide > 0 ? currentSlide - 1 : lastIndex;
       updateSlider();
     });
   }
 
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
-      currentSlide = (currentSlide + 1) % Math.min(4, blogPosts.length);
+      const total = Math.max(1, sliderTotalSlides);
+      currentSlide = (currentSlide + 1) % total;
       updateSlider();
     });
   }
@@ -348,7 +362,14 @@ function setupSliderControls() {
 
 function updateSlider() {
   if (blogSlider) {
-    blogSlider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    const track = blogSlider.querySelector(".blog-slider-track");
+    const cards = track ? track.querySelectorAll(".blog-card") : [];
+    if (cards.length > 0) {
+      const index = Math.min(Math.max(0, currentSlide), cards.length - 1);
+      const targetCard = cards[index];
+      const offset = targetCard.offsetLeft;
+      track.style.transform = `translateX(-${offset}px)`;
+    }
   }
 
   // Update indicators
@@ -370,7 +391,8 @@ function startSliderAutoplay() {
   }
 
   sliderTimer = setInterval(() => {
-    currentSlide = (currentSlide + 1) % Math.min(4, blogPosts.length);
+    const total = Math.max(1, sliderTotalSlides);
+    currentSlide = (currentSlide + 1) % total;
     updateSlider();
   }, 5000);
 }
