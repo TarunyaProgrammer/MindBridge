@@ -1131,21 +1131,42 @@ body {
 .form-card,
 .impact-card,
 .contact-info {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: 1.5rem;
   padding: 2rem;
   box-shadow: var(--shadow-xl);
+  transition: var(--transition);
+}
+
+.form-card:hover,
+.impact-card:hover,
+.contact-info:hover {
+  box-shadow: var(--shadow-2xl);
+  transform: translateY(-2px);
 }
 
 .form-title,
 .impact-title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-align: center;
   color: var(--secondary);
+  position: relative;
+}
+
+.form-title::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3rem;
+  height: 3px;
+  background: linear-gradient(135deg, var(--secondary), var(--warm-orange));
+  border-radius: 2px;
 }
 
 .form-section {
@@ -1212,7 +1233,9 @@ body {
 }
 
 .form-section input,
-.form-section textarea {
+.form-section textarea,
+.form-field input,
+.form-field textarea {
   width: 100%;
   padding: 0.75rem;
   border: 1px solid var(--border);
@@ -1220,7 +1243,18 @@ body {
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(12px);
   font-size: 1rem;
+  font-family: inherit;
+  color: var(--foreground);
   transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-section input::placeholder,
+.form-section textarea::placeholder,
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--muted-foreground);
+  opacity: 0.8;
 }
 
 .input-wrapper input {
@@ -1228,10 +1262,21 @@ body {
 }
 
 .form-section input:focus,
-.form-section textarea:focus {
+.form-section textarea:focus,
+.form-field input:focus,
+.form-field textarea:focus {
   outline: none;
   border-color: var(--secondary);
   box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.form-section input:hover,
+.form-section textarea:hover,
+.form-field input:hover,
+.form-field textarea:hover {
+  border-color: rgba(251, 146, 60, 0.3);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .form-row {
@@ -1241,7 +1286,53 @@ body {
 }
 
 .form-field {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-field .form-label {
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--foreground);
+  display: block;
+}
+
+.form-field textarea {
+  min-height: 6rem;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* Contact form specific styling */
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#contactForm .form-field:last-child {
+  margin-bottom: 0;
+}
+
+#contactForm .form-field input,
+#contactForm .form-field textarea {
+  border: 2px solid var(--border);
+  background: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+#contactForm .form-field input:focus,
+#contactForm .form-field textarea:focus {
+  border-color: var(--secondary);
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 4px rgba(251, 146, 60, 0.15);
+}
+
+#contactForm .form-field input::placeholder,
+#contactForm .form-field textarea::placeholder {
+  font-weight: 400;
+  color: var(--muted-foreground);
+  opacity: 0.7;
 }
 
 .impact-stats {
@@ -1661,5 +1752,19 @@ body {
   .tab-btn {
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
+  }
+
+  .form-field {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-field textarea {
+    min-height: 5rem;
+  }
+
+  #contactForm .form-field input,
+  #contactForm .form-field textarea {
+    font-size: 0.875rem;
+    padding: 0.625rem;
   }
 }
