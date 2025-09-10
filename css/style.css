@@ -242,7 +242,8 @@ body {
   -webkit-text-fill-color: transparent;
 }
 .nav-logo img {
-  width: 7rem;
+  width: 11rem;
+  height: auto;
 }
 
 .nav-links {
