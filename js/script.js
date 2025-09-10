@@ -528,6 +528,8 @@ function openBlogPost(postId) {
     window.location.href = "anxiety.html";
   } else if (post.id === "3") {
     window.location.href = "self-care.html";
+  } else if (post.id === "4") {
+    window.location.href = "sleep.html";
   }
   // Add more conditions for other blog posts as you create their pages
 }
