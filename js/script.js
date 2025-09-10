@@ -515,14 +515,23 @@ function renderBlogPosts() {
     lucide.createIcons();
   }
 }
+// Updated code for your script.js file
 
 function openBlogPost(postId) {
   const post = blogPosts.find((p) => p.id === postId);
   if (!post) return;
 
-  // Create modal or new page for full blog post
-  alert(`Blog Post: ${post.title}\n\n${post.content}`);
+  // Change this line to redirect to a new page
+  if (post.id === "1") {
+    window.location.href = "mindfulness.html";
+  } else if (post.id === "2") {
+    window.location.href = "anxiety.html";
+  } else if (post.id === "3") {
+    window.location.href = "self-care.html";
+  }
+  // Add more conditions for other blog posts as you create their pages
 }
+
 
 // Chat functionality
 function setupChat() {
