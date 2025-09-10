@@ -1,4 +1,138 @@
 // Blog posts data
+
+// bckchodi
+// Pixel Trail Effect
+class PixelTrail {
+    constructor(options = {}) {
+        this.pixelSize = options.pixelSize || 50;
+        this.fadeDuration = options.fadeDuration || 600;
+        this.delay = options.delay || 1000;
+        this.color = options.color || '#ffa04f';
+        this.containerSelector = options.container || '#pixelTrailContainer';
+        
+        this.container = null;
+        this.pixels = [];
+        this.activeTimeouts = new Map();
+        
+        this.init();
+    }
+    
+    init() {
+        this.container = document.querySelector(this.containerSelector);
+        if (!this.container) return;
+        
+        this.updatePixelSize();
+        this.createPixelGrid();
+        this.attachEventListeners();
+    }
+    
+    updatePixelSize() {
+        // Responsive sizing
+        if (window.innerWidth < 640) {
+            this.pixelSize = 30;
+        } else if (window.innerWidth < 1024) {
+            this.pixelSize = 40;
+        } else {
+            this.pixelSize = 50;
+        }
+    }
+    
+    createPixelGrid() {
+        const rect = this.container.getBoundingClientRect();
+        const cols = Math.ceil(rect.width / this.pixelSize);
+        const rows = Math.ceil(rect.height / this.pixelSize);
+        
+        this.container.innerHTML = '';
+        this.pixels = [];
+        
+        const grid = document.createElement('div');
+        grid.className = 'pixel-grid';
+        
+        for (let row = 0; row < rows; row++) {
+            for (let col = 0; col < cols; col++) {
+                const pixel = document.createElement('div');
+                pixel.className = 'pixel-dot';
+                pixel.style.width = `${this.pixelSize}px`;
+                pixel.style.height = `${this.pixelSize}px`;
+                pixel.style.left = `${col * this.pixelSize}px`;
+                pixel.style.top = `${row * this.pixelSize}px`;
+                pixel.style.backgroundColor = this.color;
+                pixel.dataset.row = row;
+                pixel.dataset.col = col;
+                
+                grid.appendChild(pixel);
+                this.pixels.push(pixel);
+            }
+        }
+        
+        this.container.appendChild(grid);
+    }
+    
+    attachEventListeners() {
+        this.container.addEventListener('mousemove', (e) => {
+            const rect = this.container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const col = Math.floor(x / this.pixelSize);
+            const row = Math.floor(y / this.pixelSize);
+            
+            // Activate surrounding pixels
+            for (let r = -1; r <= 1; r++) {
+                for (let c = -1; c <= 1; c++) {
+                    const pixel = this.pixels.find(p => 
+                        parseInt(p.dataset.row) === row + r && 
+                        parseInt(p.dataset.col) === col + c
+                    );
+                    if (pixel) this.activatePixel(pixel);
+                }
+            }
+        });
+        
+        // Handle resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                this.updatePixelSize();
+                this.createPixelGrid();
+            }, 250);
+        });
+    }
+    
+    activatePixel(pixel) {
+        const id = `${pixel.dataset.row}-${pixel.dataset.col}`;
+        
+        if (this.activeTimeouts.has(id)) {
+            clearTimeout(this.activeTimeouts.get(id));
+        }
+        
+        pixel.classList.add('active');
+        
+        const timeout = setTimeout(() => {
+            pixel.classList.remove('active');
+            this.activeTimeouts.delete(id);
+        }, this.delay);
+        
+        this.activeTimeouts.set(id, timeout);
+    }
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize pixel trail with your theme colors
+    new PixelTrail({
+        pixelSize: 50,
+        fadeDuration: 600,
+        delay: 1000,
+        color: '#ffa04f', // Or use your gradient colors
+        container: '#pixelTrailContainer'
+    });
+});
+// bckchodi
+
+
+
 const blogPosts = [
   {
     id: "1",
@@ -530,6 +664,10 @@ function openBlogPost(postId) {
     window.location.href = "self-care.html";
   } else if (post.id === "4") {
     window.location.href = "sleep.html";
+  } else if (post.id === "5") {
+    window.location.href = "depression.html";
+  } else if (post.id === "6") {
+    window.location.href = "stress.html";
   }
   // Add more conditions for other blog posts as you create their pages
 }
