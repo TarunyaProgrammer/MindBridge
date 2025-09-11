@@ -4,7 +4,7 @@
 // Pixel Trail Effect
 class PixelTrail {
     constructor(options = {}) {
-        this.pixelSize = options.pixelSize || 20;
+        this.pixelSize = options.pixelSize || 30;
         this.fadeDuration = options.fadeDuration || 600;
         this.delay = options.delay || 1000;
         this.color = options.color || '#ffa04f';
@@ -29,11 +29,11 @@ class PixelTrail {
     updatePixelSize() {
         // Responsive sizing
         if (window.innerWidth < 640) {
-            this.pixelSize = 10;
+            this.pixelSize = 30;
         } else if (window.innerWidth < 1024) {
-            this.pixelSize = 15;
+            this.pixelSize = 30;
         } else {
-            this.pixelSize = 20;
+            this.pixelSize = 30;
         }
     }
     
