@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mental Health Tests - Mind Bridge</title>
+    <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Link to the new tests-specific CSS -->
+    <link rel="stylesheet" href="css/tests.css" />
+  </head>
+
+  <body>
+    <!-- <header>
+        <nav class="navbar">
+            <div class="nav-container">
+            <a href="index.html" class="logo">Mind Bridge</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#resources">Resources</a></li>
+                <li><a href="index.html#ai-guide">AI Guide</a></li>
+                <li><a href="tests.html">Tests</a></li>
+                <li><a href="index.html#donate">Donate</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            </div>
+        </nav>
+
+    </header> -->
+
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-brand">
+            <h2 class="nav-logo">
+              <img src="images/mindbridge3ed.png" alt="" />
+            </h2>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="nav-links">
+            <a href="index.html#home" class="nav-link">Home</a>
+            <a href="index.html#blog" class="nav-link">Resources</a>
+            <a href="tests.html">Assessment</a>
+            <a href="index.html#chat" class="nav-link">AI Guide</a>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="nav-actions">
+            <a href="#help" class="btn btn-help" data-page="help">
+              <i data-lucide="phone"></i>
+              Get Help Now
+            </a>
+            <a href="#donate" class="btn btn-donate" data-page="donate">
+              <i data-lucide="heart"></i>
+              Donate
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+          <div class="mobile-menu-content">
+            <a href="index.html#home" class="mobile-nav-link">
+              <i data-lucide="home"></i>
+              Home
+            </a>
+            <a href="index.html#blog" class="mobile-nav-link">
+              <i data-lucide="book-open"></i>
+              Resources
+            </a>
+            <a href="tests.html" class="mobile-nav-link">
+              <i data-lucide="file-text"></i>
+              Assessment
+            </a>
+            <a href="index.html#chat" class="mobile-nav-link">
+              <i data-lucide="message-circle"></i>
+              AI Guide
+            </a>
+            <a href="index.html#help" class="mobile-nav-link">
+              <i data-lucide="phone"></i>
+              Get Help Now
+            </a>
+            <a href="index.html#donate" class="mobile-nav-link">
+              <i data-lucide="heart"></i>
+              Donate
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- Home Section -->
+        <section id="home-section" class="section">
+          <div class="hero">
+            <h1>Mental Health Self-Assessment</h1>
+            <p>
+              Take the first step towards understanding your mental wellbeing
+              with our confidential screening tools.
+            </p>
+          </div>
+
+          <div class="intro">
+            <h2>How Our Screening Works</h2>
+            <div class="intro-content">
+              <div class="intro-item">
+                <div class="intro-icon">🛡️</div>
+                <div>
+                  <strong>Purpose:</strong> These evidence-based screening tools
+                  help identify potential symptoms of depression and anxiety,
+                  providing valuable insights into your mental health status.
+                </div>
+              </div>
+              <div class="intro-item">
+                <div class="intro-icon">🔒</div>
+                <div>
+                  <strong>Confidentiality:</strong> Your responses are
+                  completely private and secure. No personal information is
+                  stored or shared. Results are displayed only to you.
+                </div>
+              </div>
+              <div class="intro-item">
+                <div class="intro-icon">⚕️</div>
+                <div>
+                  <strong>Important Note:</strong> These assessments are
+                  screening tools, not diagnostic instruments. They provide
+                  helpful insights but cannot replace professional medical
+                  evaluation or diagnosis.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="test-cards">
+            <div class="test-card" onclick="startTest('phq9')">
+              <div class="test-card-icon">🧠</div>
+              <h3>PHQ-9 Depression Test</h3>
+              <p>
+                The Patient Health Questionnaire-9 is a validated tool for
+                screening depression symptoms over the past two weeks. Takes
+                approximately 3-5 minutes to complete.
+              </p>
+              <button class="btn">Start Depression Test</button>
+            </div>
+            <div class="test-card" onclick="startTest('gad7')">
+              <div class="test-card-icon">💙</div>
+              <h3>GAD-7 Anxiety Test</h3>
+              <p>
+                The Generalized Anxiety Disorder-7 questionnaire helps identify
+                anxiety symptoms and their severity. A quick 2-3 minute
+                assessment for peace of mind.
+              </p>
+              <button class="btn">Start Anxiety Test</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Test Section -->
+        <section id="test-section" class="section hidden">
+          <div class="test-interface">
+            <div class="test-header">
+              <h2 id="test-title"></h2>
+              <p id="test-description"></p>
+              <div class="test-progress">
+                <div class="test-progress-bar" id="progress-bar"></div>
+              </div>
+            </div>
+
+            <div id="question-container"></div>
+
+            <div class="test-navigation">
+              <div class="question-counter">
+                Question <span id="current-question">1</span> of
+                <span id="total-questions">9</span>
+              </div>
+              <div>
+                <button
+                  class="btn btn-secondary"
+                  id="prev-btn"
+                  onclick="prevQuestion()"
+                  style="display: none"
+                >
+                  Previous
+                </button>
+                <button class="btn" id="next-btn" onclick="nextQuestion()">
+                  Next
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results-section" class="section hidden">
+          <div class="results">
+            <div class="results-header">
+              <h2 id="results-title">Your Assessment Results</h2>
+            </div>
+
+            <div class="score-display">
+              <div class="score-number" id="score-number">0</div>
+              <div class="severity-badge" id="severity-badge">Minimal</div>
+              <div id="score-interpretation"></div>
+            </div>
+
+            <div class="results-message" id="results-message"></div>
+
+            <div class="results-actions">
+              <button class="btn" onclick="showBookingForm()">
+                Book a Counsellor
+              </button>
+              <button class="btn btn-secondary" onclick="goToResources()">
+                Explore Resources
+              </button>
+              <button class="btn btn-secondary" onclick="retakeTest()">
+                Take Another Test
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Link to your main JS file -->
+    <script src="js/script.js"></script>
+    <!-- Link to the new tests-specific JS -->
+    <script src="js/tests.js"></script>
+    <script>
+      if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+      }
+    </script>
+  </body>
+</html>
