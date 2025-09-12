@@ -4,168 +4,354 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Understanding Anxiety: What Your Mind and Body Are Telling You
+      5 Simple Meditation Techniques for Daily Calm - Mental Health Blog
     </title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
       body {
-        font-family: "Inter", sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
         line-height: 1.6;
-        color: #333;
-        background-color: #f9fafb;
+        color: #2d3748;
+        background-color: #f7fafc;
       }
 
-      .blog-post-container {
-        max-width: 768px;
-      }
-
-      .article-hero {
-        height: 400px;
-        object-fit: cover;
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
       }
 
       .back-link {
-        transition: color 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #3182ce;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+        background-color: rgba(49, 130, 206, 0.1);
       }
 
       .back-link:hover {
-        color: #4f46e5;
+        color: #2c5282;
+        background-color: rgba(49, 130, 206, 0.15);
+        transform: translateX(-2px);
+      }
+
+      .back-link::before {
+        content: "←";
+        margin-right: 0.5rem;
+        font-size: 1.1em;
+      }
+
+      .article-header {
+        text-align: center;
+        margin-bottom: 3rem;
       }
 
       .article-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 1rem;
         line-height: 1.2;
       }
 
-      .article-content p {
-        margin-bottom: 1.5rem;
+      .article-meta {
+        color: #718096;
+        font-size: 1rem;
+        font-weight: 500;
+        background-color: #edf2f7;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        display: inline-block;
       }
 
-      .article-content h2 {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin: 2.5rem 0 1.5rem;
-        color: #111827;
+      .hero-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 16px;
+        margin-bottom: 3rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
       }
 
-      .article-content h3 {
+      .article-content {
+        background: white;
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      .intro {
         font-size: 1.25rem;
+        color: #4a5568;
+        font-weight: 400;
+        margin-bottom: 2.5rem;
+        padding: 2rem;
+        background: linear-gradient(135deg, #e6fffa 0%, #f0fff4 100%);
+        border-left: 4px solid #38b2ac;
+        border-radius: 0 12px 12px 0;
+        position: relative;
+      }
+
+      .intro::before {
+        content: '"';
+        font-size: 4rem;
+        color: #38b2ac;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        font-family: serif;
+        opacity: 0.3;
+      }
+
+      .article-body p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        color: #2d3748;
+      }
+
+      .article-body h2 {
+        font-size: 1.75rem;
         font-weight: 600;
-        margin: 2rem 0 1rem;
-        color: #111827;
+        color: #1a202c;
+        margin: 2.5rem 0 1.5rem 0;
+        padding-bottom: 0.75rem;
+        border-bottom: 3px solid #e2e8f0;
+        position: relative;
+      }
+
+      .article-body h2::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #3182ce, #38b2ac);
+        border-radius: 2px;
+      }
+
+      .article-body ul {
+        margin: 1.5rem 0;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .article-body li {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        color: #2d3748;
+        padding-left: 2rem;
+        position: relative;
+      }
+
+      .article-body li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #38b2ac;
+        font-weight: bold;
+        font-size: 1.2em;
+        top: 0;
+      }
+
+      .stress-warning {
+        background: linear-gradient(135deg, #fef5e7 0%, #fed7aa 100%);
+        border: 1px solid #f6ad55;
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 2.5rem 0;
+        position: relative;
+      }
+
+      .stress-warning::before {
+        content: "⚠️";
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .stress-warning h2 {
+        color: #c05621;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        border-bottom: none;
+        padding-left: 3rem;
+        font-size: 1.5rem;
+      }
+
+      .stress-warning h2::after {
+        display: none;
+      }
+
+      .stress-warning p {
+        color: #9c4221;
+        margin-bottom: 0;
+        font-weight: 500;
+        padding-left: 3rem;
+      }
+
+      .quick-tips {
+        background: linear-gradient(135deg, #ebf8ff 0%, #e6fffa 100%);
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 2rem 0;
+      }
+
+      .quick-tips h2 {
+        color: #2c5282;
+        margin-top: 0;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        .article-title {
+          font-size: 2rem;
+        }
+
+        .hero-image {
+          height: 250px;
+          margin-bottom: 2rem;
+          border-radius: 12px;
+        }
+
+        .article-content {
+          padding: 2rem 1.5rem;
+          border-radius: 12px;
+        }
+
+        .intro {
+          font-size: 1.1rem;
+          padding: 1.5rem;
+        }
+
+        .article-body h2 {
+          font-size: 1.5rem;
+          margin: 2rem 0 1rem 0;
+        }
+
+        .article-body p,
+        .article-body li {
+          font-size: 1rem;
+        }
+
+        .stress-warning {
+          padding: 1.5rem;
+        }
+
+        .stress-warning h2,
+        .stress-warning p {
+          padding-left: 2.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .article-title {
+          font-size: 1.75rem;
+        }
+
+        .hero-image {
+          height: 200px;
+        }
+
+        .article-content {
+          padding: 1.5rem 1rem;
+        }
+
+        .intro {
+          padding: 1rem;
+        }
+
+        .article-body li {
+          padding-left: 1.5rem;
+        }
+
+        .stress-warning h2,
+        .stress-warning p {
+          padding-left: 2rem;
+        }
       }
     </style>
   </head>
-  <body class="min-h-screen bg-gray-50">
-    <div class="container mx-auto px-4 py-12">
-      <div class="blog-post-container mx-auto">
-        <!-- Back link -->
-        <div class="mb-8">
-          <a
-            href="/index.html#blog"
-            class="back-link inline-flex items-center text-gray-600 hover:text-indigo-600"
-          >
-            <i data-feather="arrow-left" class="mr-2 w-4 h-4"></i>
-            Back to all posts
-          </a>
+   <body>
+    <div class="container">
+      <a href="/index.html#blog" class="back-link">Back to all posts</a>
+
+      <header class="article-header">
+        <h1 class="article-title">Understanding Anxiety: What Your Mind and Body Are Telling You</h1>
+        <div class="article-meta">6 min read</div>
+      </header>
+
+      <img
+        src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=600&fit=crop"
+        alt="Person feeling anxious and reflective"
+        class="hero-image"
+      />
+
+      <article class="article-content">
+        <div class="intro">
+          Anxiety is more than just “feeling nervous.” It’s your mind and body’s way of signaling stress, fear, or imbalance. Understanding these signals is the first step toward managing them.
         </div>
 
-        <!-- Article header -->
-        <header class="mb-12">
-          <h1
-            class="article-title text-4xl md:text-5xl font-bold text-gray-900 mb-4"
-          >
-            Understanding Anxiety: What Your Mind and Body Are Telling You
-          </h1>
-          <div class="flex items-center text-gray-500">
-            <span class="mr-4">By Dr. Vaishali Miglani,</span>
-            <span>January 12, 2024</span>
-          </div>
-        </header>
-
-        <!-- Hero image -->
-        <div class="mb-12 rounded-xl overflow-hidden shadow-lg">
-          <img
-            src="http://static.photos/wellness/1200x630/42"
-            alt="Mental health and wellness"
-            class="article-hero w-full"
-          />
-        </div>
-
-        <!-- Article content -->
-        <article class="article-content text-gray-700 text-lg">
-          <p class="lead">
-            Anxiety is more than just feeling stressed or worried. While stress
-            and anxious feelings are a common response to situations we perceive
-            as difficult or threatening, anxiety is when these feelings don't go
-            away and may occur without any particular reason or cause.
+        <div class="article-body">
+          <p>
+            Everyone experiences anxiety at some point, but when it becomes overwhelming or constant, it can interfere with daily life. Recognizing the signs can help you respond with compassion and healthy coping strategies.
           </p>
 
-          <h2>The Physical Manifestations of Anxiety</h2>
-          <p>
-            Your body has a built-in alarm system designed to protect you from
-            danger. When you feel anxious, your body responds as if it's under
-            attack, releasing a complex mix of hormones and chemicals like
-            adrenaline, cortisol, and norepinephrine.
-          </p>
-          <p>
-            This fight-or-flight response can trigger physical symptoms
-            including increased heart rate, sweating, trembling, dry mouth,
-            chest pain, headaches, rapid breathing, and digestive issues. These
-            symptoms are your body's way of preparing to deal with a perceived
-            threat.
-          </p>
-
-          <h2>Cognitive Symptoms and How to Reframe Your Thoughts</h2>
-          <p>
-            Anxiety doesn't just affect your body—it significantly impacts your
-            mind as well. You might experience racing thoughts, difficulty
-            concentrating, intrusive thoughts, or catastrophic thinking patterns
-            where you automatically imagine the worst possible outcome.
-          </p>
-          <p>
-            Cognitive Behavioral Therapy (CBT) techniques can help reframe these
-            thought patterns. The first step is recognizing when you're having
-            anxious thoughts. Then, challenge these thoughts by asking yourself:
-            "Is this thought realistic? What evidence do I have for and against
-            this thought? What would I tell a friend who had this thought?"
-          </p>
-
-          <h3>Practical Strategies for Managing Anxiety</h3>
-          <p>
-            While professional help is important for chronic anxiety, there are
-            several strategies you can use to manage symptoms:
-          </p>
-          <ul class="list-disc pl-6 mb-6 space-y-2">
-            <li>
-              Deep breathing exercises to activate the parasympathetic nervous
-              system
-            </li>
-            <li>Regular physical activity to reduce stress hormones</li>
-            <li>Mindfulness and meditation practices</li>
-            <li>Maintaining a consistent sleep schedule</li>
-            <li>Limiting caffeine and alcohol intake</li>
+          <h2>Common Mental Signs of Anxiety</h2>
+          <ul>
+            <li>Racing thoughts that don’t seem to stop</li>
+            <li>Difficulty concentrating or making decisions</li>
+            <li>Constant worry about “what if” scenarios</li>
+            <li>Feeling restless or “on edge”</li>
           </ul>
 
-          <p>
-            Remember that anxiety is a common human experience, and seeking help
-            is a sign of strength, not weakness. If your anxiety feels
-            overwhelming or interferes with your daily life, consider reaching
-            out to a mental health professional who can provide personalized
-            support and treatment options.
-          </p>
-        </article>
-      </div>
-    </div>
+          <h2>Common Physical Signs of Anxiety</h2>
+          <ul>
+            <li>Rapid heartbeat or chest tightness</li>
+            <li>Shortness of breath</li>
+            <li>Upset stomach or nausea</li>
+            <li>Muscle tension and headaches</li>
+            <li>Trouble falling or staying asleep</li>
+          </ul>
 
-    <script>
-      AOS.init();
-      feather.replace();
-    </script>
+          <h2>Why Does Anxiety Happen?</h2>
+          <p>
+            Anxiety is your body's natural response to stress — a built-in “alarm system.” Sometimes it's useful (helping you stay alert), but prolonged anxiety can overwhelm your nervous system, even without real danger.
+          </p>
+
+          <h2>Healthy Ways to Cope</h2>
+          <ul>
+            <li>Practice deep breathing and grounding techniques</li>
+            <li>Establish a daily routine with regular sleep and meals</li>
+            <li>Engage in physical activity, like walking or yoga</li>
+            <li>Limit caffeine and screen time before bed</li>
+            <li>Talk to friends, mentors, or a counselor about how you feel</li>
+          </ul>
+
+          <div class="stress-warning">
+            <h2>When to Seek Professional Help</h2>
+            <p>
+              If anxiety is constant, severe, or interfering with studies, sleep, or relationships, it may be time to consult a counselor or mental health professional. Early support can make a big difference.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
   </body>
 </html>

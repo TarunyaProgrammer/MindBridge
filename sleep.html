@@ -4,11 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      The Science of Sleep: How Rest Affects Mental Health | Wellness Blog
+      5 Simple Meditation Techniques for Daily Calm - Mental Health Blog
     </title>
-
     <style>
-      /* Reset and Base Styles */
       * {
         margin: 0;
         padding: 0;
@@ -17,140 +15,248 @@
 
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          "Helvetica Neue", Arial, sans-serif;
+          Oxygen, Ubuntu, Cantarell, sans-serif;
         line-height: 1.6;
-        color: #333;
-        background-color: #fafafa;
-        font-size: 16px;
+        color: #2d3748;
+        background-color: #f7fafc;
       }
 
-      /* Main Container */
-      .main-container {
+      .container {
         max-width: 800px;
         margin: 0 auto;
-        padding: 40px 20px;
-        background-color: white;
-        min-height: 100vh;
+        padding: 2rem 1rem;
       }
 
-      /* Back Button */
-      .back-button {
+      .back-link {
         display: inline-flex;
         align-items: center;
         text-decoration: none;
-        color: #5c7cfa;
-        font-size: 15px;
+        color: #3182ce;
         font-weight: 500;
-        margin-bottom: 30px;
-        transition: color 0.3s ease;
+        margin-bottom: 2rem;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+        background-color: rgba(49, 130, 206, 0.1);
       }
 
-      .back-button:hover {
-        color: #4263eb;
+      .back-link:hover {
+        color: #2c5282;
+        background-color: rgba(49, 130, 206, 0.15);
+        transform: translateX(-2px);
       }
 
-      .back-button::before {
+      .back-link::before {
         content: "←";
-        margin-right: 8px;
-        font-size: 18px;
+        margin-right: 0.5rem;
+        font-size: 1.1em;
       }
 
-      /* Article Header */
       .article-header {
-        margin-bottom: 40px;
+        text-align: center;
+        margin-bottom: 3rem;
       }
 
       .article-title {
         font-size: 2.5rem;
         font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 1rem;
         line-height: 1.2;
-        color: #1a1a1a;
-        margin-bottom: 15px;
       }
 
       .article-meta {
-        color: #6c757d;
-        font-size: 15px;
-        font-weight: 400;
-      }
-
-      /* Hero Image */
-      .hero-image-container {
-        width: 100%;
-        margin-bottom: 40px;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        color: #718096;
+        font-size: 1rem;
+        font-weight: 500;
+        background-color: #edf2f7;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        display: inline-block;
       }
 
       .hero-image {
         width: 100%;
-        height: auto;
-        display: block;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 16px;
+        margin-bottom: 3rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
       }
 
-      /* Article Content */
       .article-content {
-        font-size: 18px;
-        line-height: 1.8;
-        color: #2c3e50;
+        background: white;
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
       }
 
-      .article-content p {
-        margin-bottom: 24px;
+      .intro {
+        font-size: 1.25rem;
+        color: #4a5568;
+        font-weight: 400;
+        margin-bottom: 2.5rem;
+        padding: 2rem;
+        background: linear-gradient(135deg, #e6fffa 0%, #f0fff4 100%);
+        border-left: 4px solid #38b2ac;
+        border-radius: 0 12px 12px 0;
+        position: relative;
       }
 
-      .article-content h2 {
+      .intro::before {
+        content: '"';
+        font-size: 4rem;
+        color: #38b2ac;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        font-family: serif;
+        opacity: 0.3;
+      }
+
+      .article-body p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        color: #2d3748;
+      }
+
+      .article-body h2 {
         font-size: 1.75rem;
         font-weight: 600;
-        color: #1a1a1a;
-        margin-top: 40px;
-        margin-bottom: 20px;
-        padding-top: 10px;
+        color: #1a202c;
+        margin: 2.5rem 0 1.5rem 0;
+        padding-bottom: 0.75rem;
+        border-bottom: 3px solid #e2e8f0;
+        position: relative;
       }
 
-      .article-content ul {
-        margin-bottom: 24px;
-        padding-left: 30px;
+      .article-body h2::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #3182ce, #38b2ac);
+        border-radius: 2px;
       }
 
-      .article-content li {
-        margin-bottom: 12px;
-        line-height: 1.7;
+      .article-body ul {
+        margin: 1.5rem 0;
+        padding-left: 0;
+        list-style: none;
       }
 
-      /* Introduction Paragraph */
-      .intro-paragraph {
-        font-size: 20px;
-        line-height: 1.6;
-        color: #495057;
-        font-weight: 400;
-        margin-bottom: 30px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid #e9ecef;
+      .article-body li {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        color: #2d3748;
+        padding-left: 2rem;
+        position: relative;
       }
 
-      /* Responsive Design */
+      .article-body li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #38b2ac;
+        font-weight: bold;
+        font-size: 1.2em;
+        top: 0;
+      }
+
+      .stress-warning {
+        background: linear-gradient(135deg, #fef5e7 0%, #fed7aa 100%);
+        border: 1px solid #f6ad55;
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 2.5rem 0;
+        position: relative;
+      }
+
+      .stress-warning::before {
+        content: "⚠️";
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .stress-warning h2 {
+        color: #c05621;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        border-bottom: none;
+        padding-left: 3rem;
+        font-size: 1.5rem;
+      }
+
+      .stress-warning h2::after {
+        display: none;
+      }
+
+      .stress-warning p {
+        color: #9c4221;
+        margin-bottom: 0;
+        font-weight: 500;
+        padding-left: 3rem;
+      }
+
+      .quick-tips {
+        background: linear-gradient(135deg, #ebf8ff 0%, #e6fffa 100%);
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 2rem 0;
+      }
+
+      .quick-tips h2 {
+        color: #2c5282;
+        margin-top: 0;
+      }
+
+      /* Mobile responsiveness */
       @media (max-width: 768px) {
-        .main-container {
-          padding: 30px 15px;
+        .container {
+          padding: 1rem;
         }
 
         .article-title {
           font-size: 2rem;
         }
 
+        .hero-image {
+          height: 250px;
+          margin-bottom: 2rem;
+          border-radius: 12px;
+        }
+
         .article-content {
-          font-size: 16px;
+          padding: 2rem 1.5rem;
+          border-radius: 12px;
         }
 
-        .article-content h2 {
+        .intro {
+          font-size: 1.1rem;
+          padding: 1.5rem;
+        }
+
+        .article-body h2 {
           font-size: 1.5rem;
-          margin-top: 30px;
+          margin: 2rem 0 1rem 0;
         }
 
-        .intro-paragraph {
-          font-size: 18px;
+        .article-body p,
+        .article-body li {
+          font-size: 1rem;
+        }
+
+        .stress-warning {
+          padding: 1.5rem;
+        }
+
+        .stress-warning h2,
+        .stress-warning p {
+          padding-left: 2.5rem;
         }
       }
 
@@ -159,91 +265,94 @@
           font-size: 1.75rem;
         }
 
-        .back-button {
-          font-size: 14px;
+        .hero-image {
+          height: 200px;
         }
 
-        .article-meta {
-          font-size: 14px;
+        .article-content {
+          padding: 1.5rem 1rem;
         }
-      }
 
-      /* Accessibility and UX Improvements */
-      :focus {
-        outline: 2px solid #5c7cfa;
-        outline-offset: 2px;
-      }
+        .intro {
+          padding: 1rem;
+        }
 
-      ::selection {
-        background-color: #e3ecff;
-        color: #1a1a1a;
-      }
+        .article-body li {
+          padding-left: 1.5rem;
+        }
 
-      /* Smooth Scrolling */
-      html {
-        scroll-behavior: smooth;
+        .stress-warning h2,
+        .stress-warning p {
+          padding-left: 2rem;
+        }
       }
     </style>
   </head>
-  <body>
-    <main class="main-container">
-      <!-- Back Button -->
-      <a href="/index.html#blog" class="back-button">Back to all posts</a>
+   <body>
+     <div class="container">
+      <a href="/index.html#blog" class="back-link">Back to all posts</a>
 
-      <!-- Article Header -->
       <header class="article-header">
-        <h1 class="article-title">
-          The Science of Sleep: How Rest Affects Mental Health
-        </h1>
-        <div class="article-meta">6 min read</div>
+        <h1 class="article-title">The Science of Sleep: How Rest Affects Mental Health</h1>
+        <div class="article-meta">7 min read</div>
       </header>
 
-      <!-- Hero Image -->
-      <div class="hero-image-container">
-        <img
-          src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=800&h=600&fit=crop"
-          alt="Peaceful sleeping environment"
-          class="hero-image"
-        />
-      </div>
+      <img
+        src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&h=600&fit=crop"
+        alt="Peaceful person sleeping at night"
+        class="hero-image"
+      />
 
-      <!-- Article Content -->
       <article class="article-content">
-        <p class="intro-paragraph">
-          Explore the connection between quality sleep and emotional well-being,
-          plus practical tips for better sleep hygiene.
-        </p>
+        <div class="intro">
+          Sleep is not a luxury — it’s a biological necessity. The quality and quantity of your rest directly affect your mood, focus, and mental well-being.
+        </div>
 
-        <p>
-          Sleep and mental health are deeply connected. Poor sleep can worsen
-          anxiety and depression, while mental health challenges can disrupt
-          sleep patterns.
-        </p>
+        <div class="article-body">
+          <p>
+            College students often sacrifice sleep for exams, projects, or late-night scrolling. But poor sleep doesn’t just make you tired — it can impact your brain’s ability to regulate emotions, manage stress, and maintain focus.
+          </p>
 
-        <h2>How Sleep Affects Mental Health</h2>
-        <ul>
-          <li>Emotional regulation and mood stability</li>
-          <li>Stress hormone balance</li>
-          <li>Memory consolidation and cognitive function</li>
-          <li>Immune system strength</li>
-        </ul>
+          <h2>Why Sleep Matters for Mental Health</h2>
+          <ul>
+            <li>Restores brain function and consolidates memory</li>
+            <li>Regulates mood and emotional balance</li>
+            <li>Reduces risk of anxiety and depression</li>
+            <li>Strengthens decision-making and problem-solving skills</li>
+            <li>Supports physical health, which also affects the mind</li>
+          </ul>
 
-        <h2>Sleep Hygiene Tips</h2>
-        <ul>
-          <li>Maintain consistent sleep and wake times</li>
-          <li>Create a calming bedtime routine</li>
-          <li>Limit screen time before bed</li>
-          <li>Keep your bedroom cool, dark, and quiet</li>
-          <li>Avoid caffeine and large meals before bedtime</li>
-          <li>Get natural light exposure during the day</li>
-        </ul>
+          <h2>Common Effects of Poor Sleep</h2>
+          <ul>
+            <li>Irritability and mood swings</li>
+            <li>Difficulty focusing or remembering information</li>
+            <li>Increased stress and anxiety levels</li>
+            <li>Lower motivation and productivity</li>
+            <li>Weakened immune system and physical fatigue</li>
+          </ul>
 
-        <h2>When to Seek Help</h2>
-        <p>
-          If sleep problems persist for more than a few weeks or significantly
-          impact your daily life, consider speaking with a healthcare provider.
-        </p>
+          <h2>How Much Sleep Do You Really Need?</h2>
+          <p>
+            Most adults, including college students, need <strong>7–9 hours</strong> of quality sleep per night. Skipping sleep might seem manageable short-term, but long-term sleep debt adds up and harms mental health.
+          </p>
+
+          <h2>Tips for Better Sleep Hygiene</h2>
+          <ul>
+            <li>Stick to a consistent sleep schedule, even on weekends</li>
+            <li>Avoid caffeine and heavy meals close to bedtime</li>
+            <li>Limit screen time at least 1 hour before sleep</li>
+            <li>Create a dark, cool, and quiet sleep environment</li>
+            <li>Practice relaxation techniques like deep breathing before bed</li>
+          </ul>
+
+          <div class="stress-warning">
+            <h2>When to Seek Help</h2>
+            <p>
+              If you regularly struggle with insomnia, nightmares, or excessive daytime fatigue, consult a healthcare professional. Sleep disorders like insomnia or sleep apnea may require medical support.
+            </p>
+          </div>
+        </div>
       </article>
-    </main>
+    </div>
   </body>
 </html>
