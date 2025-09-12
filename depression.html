@@ -1,243 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Managing Depression: Small Steps Toward Healing - Mental Health Blog</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Managing Depression: Small Steps Toward Healing - Mental Health Blog
+    </title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+      }
 
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #6366f1;
+        font-weight: 500;
+        margin-bottom: 2rem;
+        transition: color 0.2s ease;
+      }
+
+      .back-link:hover {
+        color: #4f46e5;
+      }
+
+      .back-link::before {
+        content: "←";
+        margin-right: 0.5rem;
+        font-size: 1.1em;
+      }
+
+      .article-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .article-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .article-meta {
+        color: #6b7280;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 3rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .article-content {
+        background: white;
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .intro {
+        font-size: 1.25rem;
+        color: #4b5563;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: #f3f4f6;
+        border-left: 4px solid #6366f1;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .article-body p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        color: #374151;
+      }
+
+      .article-body h2 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        color: #1f2937;
+        margin: 2.5rem 0 1.5rem 0;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #e5e7eb;
+      }
+
+      .article-body ul {
+        margin: 1.5rem 0;
+        padding-left: 2rem;
+      }
+
+      .article-body li {
+        margin-bottom: 0.75rem;
+        font-size: 1.1rem;
+        color: #374151;
+      }
+
+      .article-body li::marker {
+        color: #6366f1;
+      }
+
+      .crisis-resources {
+        background: #fef3c7;
+        border: 1px solid #f59e0b;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .crisis-resources h2 {
+        color: #d97706;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        border-bottom: none;
+      }
+
+      .crisis-resources p {
+        color: #92400e;
+        margin-bottom: 0;
+        font-weight: 500;
+      }
+
+      /* Mobile responsiveness */
+      @media (max-width: 768px) {
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-            color: #6366f1;
-            font-weight: 500;
-            margin-bottom: 2rem;
-            transition: color 0.2s ease;
-        }
-
-        .back-link:hover {
-            color: #4f46e5;
-        }
-
-        .back-link::before {
-            content: "←";
-            margin-right: 0.5rem;
-            font-size: 1.1em;
-        }
-
-        .article-header {
-            text-align: center;
-            margin-bottom: 3rem;
+          padding: 1rem;
         }
 
         .article-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .article-meta {
-            color: #6b7280;
-            font-size: 1rem;
-            font-weight: 500;
+          font-size: 2rem;
         }
 
         .hero-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 3rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+          height: 250px;
+          margin-bottom: 2rem;
         }
 
         .article-content {
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+          padding: 2rem 1.5rem;
         }
 
         .intro {
-            font-size: 1.25rem;
-            color: #4b5563;
-            font-weight: 400;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: #f3f4f6;
-            border-left: 4px solid #6366f1;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .article-body p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            color: #374151;
+          font-size: 1.1rem;
+          padding: 1rem;
         }
 
         .article-body h2 {
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin: 2.5rem 0 1.5rem 0;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e5e7eb;
+          font-size: 1.5rem;
+          margin: 2rem 0 1rem 0;
+        }
+
+        .article-body p,
+        .article-body li {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .article-title {
+          font-size: 1.75rem;
+        }
+
+        .hero-image {
+          height: 200px;
+        }
+
+        .article-content {
+          padding: 1.5rem 1rem;
         }
 
         .article-body ul {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
+          padding-left: 1.5rem;
         }
-
-        .article-body li {
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-            color: #374151;
-        }
-
-        .article-body li::marker {
-            color: #6366f1;
-        }
-
-        .crisis-resources {
-            background: #fef3c7;
-            border: 1px solid #f59e0b;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .crisis-resources h2 {
-            color: #d97706;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            border-bottom: none;
-        }
-
-        .crisis-resources p {
-            color: #92400e;
-            margin-bottom: 0;
-            font-weight: 500;
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-
-            .article-title {
-                font-size: 2rem;
-            }
-
-            .hero-image {
-                height: 250px;
-                margin-bottom: 2rem;
-            }
-
-            .article-content {
-                padding: 2rem 1.5rem;
-            }
-
-            .intro {
-                font-size: 1.1rem;
-                padding: 1rem;
-            }
-
-            .article-body h2 {
-                font-size: 1.5rem;
-                margin: 2rem 0 1rem 0;
-            }
-
-            .article-body p,
-            .article-body li {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .article-title {
-                font-size: 1.75rem;
-            }
-
-            .hero-image {
-                height: 200px;
-            }
-
-            .article-content {
-                padding: 1.5rem 1rem;
-            }
-
-            .article-body ul {
-                padding-left: 1.5rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <a href="#" class="back-link">Back to all posts</a>
-        
-        <header class="article-header">
-            <h1 class="article-title">Managing Depression: Small Steps Toward Healing</h1>
-            <div class="article-meta">5 min read</div>
-        </header>
+      <a href="/index.html#blog" class="back-link">Back to all posts</a>
 
-        <img src="https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?w=800&h=600&fit=crop" 
-             alt="Peaceful nature scene representing mental wellness" 
-             class="hero-image">
+      <header class="article-header">
+        <h1 class="article-title">
+          Managing Depression: Small Steps Toward Healing
+        </h1>
+        <div class="article-meta">5 min read</div>
+      </header>
 
-        <article class="article-content">
-            <div class="intro">
-                Gentle, practical strategies for coping with depression and taking care of your mental health one day at a time.
-            </div>
+      <img
+        src="https://images.unsplash.com/photo-1517960413843-0aee8e2b3285?w=800&h=600&fit=crop"
+        alt="Peaceful nature scene representing mental wellness"
+        class="hero-image"
+      />
 
-            <div class="article-body">
-                <p>Living with depression can feel overwhelming, but small, consistent steps can make a meaningful difference in your healing journey.</p>
+      <article class="article-content">
+        <div class="intro">
+          Gentle, practical strategies for coping with depression and taking
+          care of your mental health one day at a time.
+        </div>
 
-                <h2>Understanding Depression</h2>
-                <p>Depression affects everyone differently, but common experiences include persistent sadness, loss of interest, fatigue, and difficulty concentrating.</p>
+        <div class="article-body">
+          <p>
+            Living with depression can feel overwhelming, but small, consistent
+            steps can make a meaningful difference in your healing journey.
+          </p>
 
-                <h2>Gentle Self-Care Strategies</h2>
-                <ul>
-                    <li>Start with tiny, achievable goals</li>
-                    <li>Maintain basic daily routines when possible</li>
-                    <li>Connect with supportive people, even briefly</li>
-                    <li>Spend time in nature or near windows</li>
-                    <li>Practice gentle movement or stretching</li>
-                    <li>Engage in activities that once brought joy</li>
-                </ul>
+          <h2>Understanding Depression</h2>
+          <p>
+            Depression affects everyone differently, but common experiences
+            include persistent sadness, loss of interest, fatigue, and
+            difficulty concentrating.
+          </p>
 
-                <h2>Professional Support</h2>
-                <p>Therapy, medication, or both can be highly effective. Don't hesitate to reach out to mental health professionals.</p>
+          <h2>Gentle Self-Care Strategies</h2>
+          <ul>
+            <li>Start with tiny, achievable goals</li>
+            <li>Maintain basic daily routines when possible</li>
+            <li>Connect with supportive people, even briefly</li>
+            <li>Spend time in nature or near windows</li>
+            <li>Practice gentle movement or stretching</li>
+            <li>Engage in activities that once brought joy</li>
+          </ul>
 
-                <div class="crisis-resources">
-                    <h2>Crisis Resources</h2>
-                    <p>If you're having thoughts of self-harm, please reach out immediately to a crisis hotline or emergency services.</p>
-                </div>
-            </div>
-        </article>
+          <h2>Professional Support</h2>
+          <p>
+            Therapy, medication, or both can be highly effective. Don't hesitate
+            to reach out to mental health professionals.
+          </p>
+
+          <div class="crisis-resources">
+            <h2>Crisis Resources</h2>
+            <p>
+              If you're having thoughts of self-harm, please reach out
+              immediately to a crisis hotline or emergency services.
+            </p>
+          </div>
+        </div>
+      </article>
     </div>
-</body>
+  </body>
 </html>

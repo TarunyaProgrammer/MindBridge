@@ -41,7 +41,7 @@
           <div class="nav-links">
             <a href="index.html#home" class="nav-link">Home</a>
             <a href="index.html#blog" class="nav-link">Resources</a>
-            <a href="tests.html">Assessment</a>
+            <a href="tests.html" class="nav-link">Assessment</a>
             <a href="index.html#chat" class="nav-link">AI Guide</a>
           </div>
 
@@ -100,7 +100,14 @@
         <!-- Home Section -->
         <section id="home-section" class="section">
           <div class="hero">
-            <h1>Mental Health Self-Assessment</h1>
+            <div class="hero-bg">
+              <div class="bg-element bg-element-1"></div>
+              <div class="bg-element bg-element-2"></div>
+              <div class="bg-element bg-element-3"></div>
+            </div>
+            <h1>
+              <span class="gradient-text">Mental Health Self-Assessment</span>
+            </h1>
             <p>
               Take the first step towards understanding your mental wellbeing
               with our confidential screening tools.
@@ -147,7 +154,7 @@
                 screening depression symptoms over the past two weeks. Takes
                 approximately 3-5 minutes to complete.
               </p>
-              <button class="btn">Start Depression Test</button>
+              <button class="btn btn-primary">Start Depression Test</button>
             </div>
             <div class="test-card" onclick="startTest('gad7')">
               <div class="test-card-icon">💙</div>
@@ -157,7 +164,7 @@
                 anxiety symptoms and their severity. A quick 2-3 minute
                 assessment for peace of mind.
               </p>
-              <button class="btn">Start Anxiety Test</button>
+              <button class="btn btn-primary">Start Anxiety Test</button>
             </div>
           </div>
         </section>
@@ -189,7 +196,11 @@
                 >
                   Previous
                 </button>
-                <button class="btn" id="next-btn" onclick="nextQuestion()">
+                <button
+                  class="btn btn-primary"
+                  id="next-btn"
+                  onclick="nextQuestion()"
+                >
                   Next
                 </button>
               </div>

@@ -1,164 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Building Resilience | Wellness Blog</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
-        :root {
-            --primary: #4a6fa5;
-            --secondary: #166088;
-            --light: #f8f9fa;
-            --dark: #343a40;
-            --text: #495057;
-            --border: #dee2e6;
-        }
+      :root {
+        --primary: #4a6fa5;
+        --secondary: #166088;
+        --light: #f8f9fa;
+        --dark: #343a40;
+        --text: #495057;
+        --border: #dee2e6;
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: #f5f7fa;
-        }
+      body {
+        font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+        line-height: 1.6;
+        color: var(--text);
+        background-color: #f5f7fa;
+      }
 
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .back-link:hover {
+        color: var(--secondary);
+      }
+
+      .back-link i {
+        margin-right: 0.5rem;
+      }
+
+      .article-header {
+        margin-bottom: 1.5rem;
+      }
+
+      .article-title {
+        font-size: 2.25rem;
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+        line-height: 1.2;
+      }
+
+      .article-meta {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .article-content {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .article-content p {
+        margin-bottom: 1.25rem;
+      }
+
+      .article-content h2 {
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem;
+        color: var(--secondary);
+      }
+
+      .article-content ul,
+      .article-content ol {
+        margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      .article-content li {
+        margin-bottom: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .back-link:hover {
-            color: var(--secondary);
-        }
-
-        .back-link i {
-            margin-right: 0.5rem;
-        }
-
-        .article-header {
-            margin-bottom: 1.5rem;
+          padding: 1rem;
         }
 
         .article-title {
-            font-size: 2.25rem;
-            margin-bottom: 0.5rem;
-            color: var(--dark);
-            line-height: 1.2;
-        }
-
-        .article-meta {
-            color: #6c757d;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          font-size: 1.75rem;
         }
 
         .article-content {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          padding: 1.5rem;
         }
-
-        .article-content p {
-            margin-bottom: 1.25rem;
-        }
-
-        .article-content h2 {
-            font-size: 1.5rem;
-            margin: 2rem 0 1rem;
-            color: var(--secondary);
-        }
-
-        .article-content ul, 
-        .article-content ol {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-        }
-
-        .article-content li {
-            margin-bottom: 0.5rem;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .article-title {
-                font-size: 1.75rem;
-            }
-            
-            .article-content {
-                padding: 1.5rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <a href="index.html" class="back-link">
-            <i class="fas fa-arrow-left"></i> Back to all posts
-        </a>
+      <a href="/index.html#blog" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to all posts
+      </a>
 
-        <header class="article-header">
-            <h1 class="article-title">Building Resilience: Bouncing Back from Life's Challenges</h1>
-            <div class="article-meta">4 min read</div>
-        </header>
+      <header class="article-header">
+        <h1 class="article-title">
+          Building Resilience: Bouncing Back from Life's Challenges
+        </h1>
+        <div class="article-meta">4 min read</div>
+      </header>
 
-        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&h=600&fit=crop" 
-             alt="Person standing on mountain peak with arms outstretched" 
-             class="hero-image">
+      <img
+        src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&h=600&fit=crop"
+        alt="Person standing on mountain peak with arms outstretched"
+        class="hero-image"
+      />
 
-        <div class="article-content">
-            <p>Discover evidence-based strategies for developing emotional resilience and maintaining mental wellness during difficult times.</p>
+      <div class="article-content">
+        <p>
+          Discover evidence-based strategies for developing emotional resilience
+          and maintaining mental wellness during difficult times.
+        </p>
 
-            <p>Resilience isn't about avoiding difficult emotions or pretending everything is fine. It's about developing the skills to navigate life's ups and downs while maintaining your mental health.</p>
+        <p>
+          Resilience isn't about avoiding difficult emotions or pretending
+          everything is fine. It's about developing the skills to navigate
+          life's ups and downs while maintaining your mental health.
+        </p>
 
-            <h2>Key Components of Resilience</h2>
-            <ul>
-                <li>Emotional awareness and regulation</li>
-                <li>Flexible thinking patterns</li>
-                <li>Strong social connections</li>
-                <li>Self-care practices</li>
-                <li>Meaning and purpose in life</li>
-            </ul>
+        <h2>Key Components of Resilience</h2>
+        <ul>
+          <li>Emotional awareness and regulation</li>
+          <li>Flexible thinking patterns</li>
+          <li>Strong social connections</li>
+          <li>Self-care practices</li>
+          <li>Meaning and purpose in life</li>
+        </ul>
 
-            <h2>Building Your Resilience Toolkit</h2>
-            <ol>
-                <li>Practice self-compassion during setbacks</li>
-                <li>Develop problem-solving skills</li>
-                <li>Cultivate gratitude and optimism</li>
-                <li>Build and maintain supportive relationships</li>
-                <li>Create healthy routines and boundaries</li>
-            </ol>
+        <h2>Building Your Resilience Toolkit</h2>
+        <ol>
+          <li>Practice self-compassion during setbacks</li>
+          <li>Develop problem-solving skills</li>
+          <li>Cultivate gratitude and optimism</li>
+          <li>Build and maintain supportive relationships</li>
+          <li>Create healthy routines and boundaries</li>
+        </ol>
 
-            <p>Resilience is a skill that can be developed with practice and patience.</p>
-        </div>
+        <p>
+          Resilience is a skill that can be developed with practice and
+          patience.
+        </p>
+      </div>
     </div>
-</body>
+  </body>
 </html>

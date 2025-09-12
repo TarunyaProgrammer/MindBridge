@@ -8,63 +8,56 @@
 /* bckchodi */
 /* Pixel Trail Styles - Add at the end of your CSS file */
 .pixel-trail-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 5; /* Below your content but above background */
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5; /* Below your content but above background */
+  overflow: hidden;
 }
 
 .pixel-grid {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    pointer-events: auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
 }
 
 .pixel-dot {
-    position: absolute;
-    border-radius: 50%;
-    background-color: #ffa04f; /* Orange - change to match your theme */
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-    pointer-events: none;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ffa04f; /* Orange - change to match your theme */
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  pointer-events: none;
 }
 
 /* You can also use your existing filter-tab gradient color */
 .pixel-dot.alt-color {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .pixel-dot.active {
-    opacity: 0.4;
+  opacity: 0.4;
 }
 
 /* Make sure your blog-content section has relative positioning */
 .blog-content {
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-    .pixel-trail-container {
-        /* Disable on very small screens if needed */
-        display: block; /* or 'none' to disable on mobile */
-    }
+  .pixel-trail-container {
+    /* Disable on very small screens if needed */
+    display: block; /* or 'none' to disable on mobile */
+  }
 }
 /* bckchodi */
-
-
-
-
-
-
-
 
 :root {
   /* Orange and Dark Blue Color Palette */
