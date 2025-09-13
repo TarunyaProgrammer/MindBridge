@@ -281,8 +281,17 @@ function setupNavigation() {
   document.addEventListener("click", function (e) {
     const link = e.target.closest("[data-page]");
     if (link) {
-      e.preventDefault();
       const pageName = link.getAttribute("data-page");
+      
+      // Check if this is an external link (has href pointing to external file)
+      const href = link.getAttribute("href");
+      if (href && (href.includes('.html') || href.startsWith('http'))) {
+        // Allow external links to work normally - don't prevent default
+        return;
+      }
+      
+      // For internal page navigation, prevent default and show page
+      e.preventDefault();
       showPage(pageName);
 
       // Close mobile menu if open
